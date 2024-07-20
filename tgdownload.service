@@ -1,0 +1,14 @@
+[Unit]
+Description=telegram download bot
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/TG-FileStreamBot
+ExecStart=python3 -m WebStreamer
+Restart=always
+RestartSec=5
+StartLimitInterval=0
+
+[Install]
+WantedBy=multi-user.target
